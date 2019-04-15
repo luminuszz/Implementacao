@@ -1,0 +1,31 @@
+Criar nova instância;
+Põe small;
+Ubuntu 18.04 LTS;
+Permitir acesso HTTP, HTTPS;
+Clicar em SSH;
+sudo su;|Altera o usuário root: levi123
+passwd;|Altera a senha do root: levi123, os dois são dados um depois do outro
+passwd proflevisenai;|alterar senha do usuário: levi123
+exit;|1º vez volta pro usuário normal;2º vez sai da tela
+sudo nano /etc /ssh /ssgd;|nano editor de texto
+porta 22;|liberar acesso SSH 22
+listenAdress 0.0.0.0;|limitador de ip
+pubkeyauthentication yes;|Para acessar maquina via chave pública
+PasswordAuthentication yes;|tira segurança
+Ctrl+x, dps y+Enter;|sair
+sudo nano /etc/sudoers;|Permissão ao usuário 
+All=(All:All) All;|deu todas as permissões
+Ctrl+x, dps y+Enter;|sair
+sudo service ssh restart;| reiniciar o serviço ssh
+sudo apt-get update;|atualiza o repositório do linux
+sudo apt-get upgrade;|baixa as atualizações
+sudo apt-get install nginx;| instalar o servidor wed nginx
+cd /usr/share/nginx/html;|
+ls;| verifica se tem o indez, se tiver o servidor ta no ar
+pega o ip externo e joga no chrome;
+sudo rm index.html;| remover
+ls;|para verificar
+sudo nano index.html;| entrar em um editor de texto lá
+sudo service nginx stop; - parar o serviço do nginx
+sudo apt-get install apache2 - instalar o servidor do apache2
+sudo rm index.html - remove o arquivo index.html
